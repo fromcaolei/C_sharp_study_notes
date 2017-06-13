@@ -1,0 +1,9 @@
+--update Persons set City=5 where City is NULL;
+--update Persons set City=6 where Address='';
+
+--insert into aaa (LastName,FirstName) values ('','');
+--alter table aaa drop PRIMARY KEY Id_P;
+--alter table aaa drop column Id_P;
+--select * from aaa
+
+select getdate()

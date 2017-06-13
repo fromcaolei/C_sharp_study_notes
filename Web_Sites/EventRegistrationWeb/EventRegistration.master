@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EventRegistration.master.cs" Inherits="EventRegistration" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            height: 150px;
+        }
+        .style3
+        {
+            height: 150px;
+            width: 169px;
+        }
+        .style4
+        {
+            height: 40px;
+            text-align: left;
+            font-size: larger;
+        }
+        .style5
+        {
+            height: 40px;
+            text-align: center;
+        }
+        .style6
+        {
+            height: 40px;
+            text-align: center;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <table class="style1">
+            <tr>
+                <td class="style6" colspan="2">
+                    <strong style="font-size: xx-large; text-align: center">Registration Demo Web</strong></td>
+            </tr>
+            <tr>
+                <td class="style4" colspan="2">
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                        SiteMapProvider="web1sitemap" />
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
+                        DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" 
+                        Font-Names="Verdana" Font-Size="Small" ForeColor="#284E98" 
+                        StaticSubMenuIndent="10px">
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#B5C7DE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                    </asp:Menu>
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" 
+                        Font-Size="Small" PathSeparator=" : " SiteMapProvider="web1sitemap">
+                        <CurrentNodeStyle ForeColor="#333333" />
+                        <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+                        <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+                        <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+                    </asp:SiteMapPath>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenu" runat="server">
+                        <p style="height: 150px; width: 330px;">
+                            Hello World</p>
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                        <p style="height: 150px">
+                            Registration Demo Web Master</p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style5" colspan="2">
+                    Copynght(C) 2005 Wrox Press</td>
+            </tr>
+        </table>
+
+    </div>
+    </form>
+</body>
+</html>

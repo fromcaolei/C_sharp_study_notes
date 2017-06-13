@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stories>
+  <book>
+    <!--This book is the book you are reading-->
+    <title>Beginning Visual C# 3rd Edition</title>
+    <author>Karli Watson et al</author>
+    <code>1234567890</code>
+  </book>
+</stories>

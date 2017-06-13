@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="SimpleEditorTest.exe" version="1.0.0.0" publicKeyToken="a34e72e34f14922f" language="zh-Hans" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="SimpleEditorTest" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="SimpleEditorTest.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC 清单选项
+            如果要更改 Windows 用户帐户控制级别，请用以下节点之一替换 
+            requestedExecutionLevel 节点。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            指定 requestedExecutionLevel 节点将会禁用文件和注册表虚拟化。
+            如果要利用文件和注册表虚拟化实现向后 
+            兼容性，则删除 requestedExecutionLevel 节点。
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimpleEditorTest.exe" size="26624">
+      <assemblyIdentity name="SimpleEditorTest" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>FrsEUpHMyRBGqDJ5YxG0V4KH7us=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 此应用程序设计使用的所有 Windows 版本的列表。Windows 将会自动选择最兼容的环境。-->
+      <!-- 如果应用程序设计使用 Windows 7，请取消注释以下 supportedOS 节点-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=FCL\Administrator" issuerKeyHash="dfa569aef3285e2003b160a2f11dfe2411f3100d" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>/+8/URQsLmTZJonNxj2p/jItYCk=</DigestValue></Reference></SignedInfo><SignatureValue>FhmdMu9pi2o9OOraIw2azR/TxoB2ejyQ2/cq5LGgG3Dxqg5N4/Ln1xHGNMwwxz6EvajyhCzmecGgTYaIDx308Hij8pNkHI1UXzCqylHFz+82yqEIzIN9Bi03be6MUzBfHWoPJ6o2IXGWWEIU16uNlKbUbjBWInPFHrmEVWXCRc8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>sJsdtSOBTVrcJgqu1P4vFH8s2TOYBEbUGYZvUWFuNuMmOSUPe8uSDspwFJWlIWefFVtOW6j6dmoqWIGFe4LlT6kDSibhdu6FYi1QaAcKIGQiqcpGjCFVP9dYlnx8bVjFW6AWJBT1e6YABMSZOndDaGLx3Xa5G7dqkTG3a9IJmyE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="29602d32fea93dc6cd8926d9642e2c14513fefff" Description="" Url=""><as:assemblyIdentity name="SimpleEditorTest.exe" version="1.0.0.0" publicKeyToken="a34e72e34f14922f" language="zh-Hans" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=FCL\Administrator</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>XZj5mJOZCOFdL+cc61IZzCq3Tt8=</DigestValue></Reference></SignedInfo><SignatureValue>bNkkAmbqYNaXHsZuxUpNHIe2pkhoU6BvpxLKwdEDQ//90KhPpHcadXhegtHy18BZAWZiSYAiRCLjmVmXwe9sI3pGaLzIbx0xFE9UXtmWcktHYx4JIsNapfNenQrJVIczWdgVCuYrMnfGYqoEF9A3MIwjXoR1qjCVzPSFgKDSeg4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>sJsdtSOBTVrcJgqu1P4vFH8s2TOYBEbUGYZvUWFuNuMmOSUPe8uSDspwFJWlIWefFVtOW6j6dmoqWIGFe4LlT6kDSibhdu6FYi1QaAcKIGQiqcpGjCFVP9dYlnx8bVjFW6AWJBT1e6YABMSZOndDaGLx3Xa5G7dqkTG3a9IJmyE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUagAwIBAgIQHXqFW/8hSb9OJlhW/k2j7TANBgkqhkiG9w0BAQUFADAtMSswKQYDVQQDHiIARgBDAEwAXABBAGQAbQBpAG4AaQBzAHQAcgBhAHQAbwByMB4XDTE3MDIwMjA2NTA0MVoXDTE4MDIwMjEyNTA0MVowLTErMCkGA1UEAx4iAEYAQwBMAFwAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAsJsdtSOBTVrcJgqu1P4vFH8s2TOYBEbUGYZvUWFuNuMmOSUPe8uSDspwFJWlIWefFVtOW6j6dmoqWIGFe4LlT6kDSibhdu6FYi1QaAcKIGQiqcpGjCFVP9dYlnx8bVjFW6AWJBT1e6YABMSZOndDaGLx3Xa5G7dqkTG3a9IJmyECAwEAATANBgkqhkiG9w0BAQUFAAOBgQCFFGU4kBdQd/LkC1uGfXVCnsDSBSWGKpEFAXmquQTwQrvTlA6soyfPY+2kOj1bjdcmYfDvwYArgIiJKEm4PQKU0whciL0GUNL3AU177AZ4lG/xUmbXaAtKtTPEKo4XDxLULc2+RjnKvpeRzNk5v6UyZVMj/qJno9AVaglF+SMg0w==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
