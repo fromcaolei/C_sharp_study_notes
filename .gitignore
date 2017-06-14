@@ -85,7 +85,6 @@ ipch/
 *.ncb
 *.opendb
 *.opensdf
-*.sdf
 *.cachefile
 *.VC.db
 *.VC.VC.opendb
@@ -221,9 +220,7 @@ UpgradeLog*.XML
 UpgradeLog*.htm
 
 # SQL Server files
-#*.mdf
 *.ldf
-#*.ndf
 
 # Business Intelligence projects
 *.rdl.data
@@ -294,7 +291,12 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
+#我主动取消掉的忽略
+#*.sdf
+#*.ndf
+#*.mdf
 
+#我主动添加的忽略
 _gsdata_/
 资源/
 *.pdf
