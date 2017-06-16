@@ -52,6 +52,17 @@ namespace DataReading
                 Console.WriteLine(theRow["ID"] + "\t" + theRow["Title"]);
             }
 
+            Console.ReadKey();
+
+            //尝试ADO.NET对XML的支持
+            thisDataSet.WriteXml("../../../StudyADONET.xml");
+            thisDataSet.ReadXml("../../../StudyADONET.xml");
+            foreach (DataRow theRow in thisDataSet.Tables["Events"].Rows)  //也可使用Tables[0]获取第一个表
+            {
+                Console.WriteLine("ReadXml_ID: " + theRow["ID"] + "\t" + "ReadXml_Title: " + theRow["Title"]);
+            }
+
+
             thisConnection.Close();
 
             Console.ReadKey();
