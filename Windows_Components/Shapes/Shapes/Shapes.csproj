@@ -57,6 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Company.Key" />
+    <None Include="bin\Debug\Company.Public" />
+    <None Include="bin\Debug\Shapes.Public" />
     <None Include="bin\Debug\Shapes.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
