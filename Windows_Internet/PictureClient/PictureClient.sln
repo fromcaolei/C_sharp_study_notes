@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureClient", "PictureClient\PictureClient.csproj", "{89726DB9-1FE5-4614-A105-02F7C478BCBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89726DB9-1FE5-4614-A105-02F7C478BCBD}.Debug|x86.ActiveCfg = Debug|x86
+		{89726DB9-1FE5-4614-A105-02F7C478BCBD}.Debug|x86.Build.0 = Debug|x86
+		{89726DB9-1FE5-4614-A105-02F7C478BCBD}.Release|x86.ActiveCfg = Release|x86
+		{89726DB9-1FE5-4614-A105-02F7C478BCBD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
