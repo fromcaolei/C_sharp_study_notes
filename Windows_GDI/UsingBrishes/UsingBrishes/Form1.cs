@@ -22,7 +22,7 @@ namespace UsingBrishes
             SetStyle(ControlStyles.Opaque, true);
 
             //Brush类的TextureBrush子类用到的变量
-            theImage = new Bitmap("taylor.jpg");
+            theImage = new Bitmap("../../../taylor.jpg");
             smallImage = new Bitmap(theImage, new Size(theImage.Width / 10, theImage.Height / 10));
         }
 

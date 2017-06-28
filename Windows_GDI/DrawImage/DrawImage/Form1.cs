@@ -17,7 +17,7 @@ namespace DrawImage
         {
             InitializeComponent();
             SetStyle(ControlStyles.Opaque, true);
-            theImage = new Bitmap("taylor.jpg");
+            theImage = new Bitmap("../../../taylor.jpg");
         }
 
         protected override void OnPaint(PaintEventArgs e)
