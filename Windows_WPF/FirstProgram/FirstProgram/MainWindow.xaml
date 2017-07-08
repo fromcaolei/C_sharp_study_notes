@@ -1,0 +1,139 @@
+﻿<Window x:Class="FirstProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <!--和动画有关-->
+    <Window.Resources>
+        <!--x:Key特性允许使用键通过Resources引用故事板对象-->
+        <Storyboard x:Key="Spin">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+        Storyboard.TargetName="ellipse1"
+        Storyboard.TargetProperty=
+ "(UIElement.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+        RepeatBehavior="Forever">
+                <SplineDoubleKeyFrame KeyTime="00:00:10" Value="360"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+        Storyboard.TargetName="ellipse2"
+        Storyboard.TargetProperty=
+ "(UIElement.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+        RepeatBehavior="Forever">
+                <SplineDoubleKeyFrame KeyTime="00:00:10" Value="-360"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+        Storyboard.TargetName="ellipse3"
+        Storyboard.TargetProperty=
+ "(UIElement.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+        RepeatBehavior="Forever">
+                <SplineDoubleKeyFrame KeyTime="00:00:05" Value="360"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+        Storyboard.TargetName="ellipse4"
+        Storyboard.TargetProperty=
+ "(UIElement.RenderTransform).(TransformGroup.Children)[0].(RotateTransform.Angle)"
+        RepeatBehavior="Forever">
+                <SplineDoubleKeyFrame KeyTime="00:00:05" Value="-360"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    
+    <!--和动画有关，定义了三个触发器-->
+    <Window.Triggers>
+        <!--第一个触发器将FrameworkElement.Loaded时间和BeginStoryboard动作链接起来，用来启动Spin动画-->
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Spin}"
+        x:Name="Spin_BeginStoryboard"/>
+        </EventTrigger>
+        <!--以下两个触发器分别链接了连个按钮的Click事件，使用了ResumeStoryboard、PauseStoryboard动作。-->
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="goButton">
+            <ResumeStoryboard BeginStoryboardName="Spin_BeginStoryboard"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="stopButton">
+            <PauseStoryboard BeginStoryboardName="Spin_BeginStoryboard"/>
+        </EventTrigger>
+    </Window.Triggers>
+    
+    <!--定义了窗体背景的颜色，笔刷定义可一个自上而下从白色过渡到桃色的渐变色-->
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FFFFC45A" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    
+    <!--Grid用于在WPF程序中用于布局的几个控件之，这里包含了5个椭圆、3个按钮一-->
+    <Grid>
+        <!--Margin指定控件位置；Stroke定义勾画图形轮廓的笔刷；-->
+        <Ellipse Margin="50,50,0,0" Name="ellipse5" Stroke="Black" Height="150"
+      HorizontalAlignment="Left" VerticalAlignment="Top" Width="150">
+            <!--显示控件时，使用的特效。这个特效会用BlurEffect.Radius属性定义的数值模糊图形，不能用于Web应用程序-->
+            <Ellipse.Effect>
+                <BlurEffect Radius="10" />
+            </Ellipse.Effect>
+            <!--指定笔刷及颜色-->
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF000000" Offset="1"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.306"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <!--和第一个椭圆有所区别，Stroke画笔应该使用标记扩展，用于不能再XAML语法中简化为简单字符串的属性提供值，这里指定为null值表示没有笔刷；RenderTransformOrigin设置中心点-->
+        <Ellipse Margin="15,85,0,0" Name="ellipse1" Stroke="{x:Null}" Height="80"
+      HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Fill="Red"
+      Opacity="0.5" RenderTransformOrigin="0.92,0.5" >
+            <!--默认为5-->
+            <Ellipse.Effect>
+                <BlurEffect />
+            </Ellipse.Effect>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="0"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Margin="85,15,0,0" Name="ellipse2" Stroke="{x:Null}" Height="120"
+      HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Fill="Blue"
+      Opacity="0.5" RenderTransformOrigin="0.5,0.92" >
+            <Ellipse.Effect>
+                <BlurEffect />
+            </Ellipse.Effect>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="0"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Margin="115,85,0,0" Name="ellipse3" Stroke="{x:Null}" Height="80"
+      HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Opacity="0.5"
+      Fill="Yellow" RenderTransformOrigin="0.08,0.5" >
+            <Ellipse.Effect>
+                <BlurEffect />
+            </Ellipse.Effect>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="0"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse Margin="85,115,0,0" Name="ellipse4" Stroke="{x:Null}" Height="120"
+      HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Opacity="0.5"
+      Fill="Green" RenderTransformOrigin="0.5,0.08" >
+            <Ellipse.Effect>
+                <BlurEffect />
+            </Ellipse.Effect>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="0"/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Button Height="23" HorizontalAlignment="Left" Margin="20,0,0,56"
+      Name="goButton" VerticalAlignment="Bottom" Width="75" Content="Go"/>
+        <Button Height="23" HorizontalAlignment="Left" Margin="152,0,0,56"
+      Name="stopButton" VerticalAlignment="Bottom" Width="75" Content="Stop"/>
+        <Button Height="23" HorizontalAlignment="Left" Margin="85,0,86,16"
+      Name="toggleButton" VerticalAlignment="Bottom" Width="75" Content="Toggle" Click="toggleButton_Click" />
+    </Grid>
+</Window>
