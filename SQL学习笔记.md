@@ -299,3 +299,5 @@ SELECT ProductName,UnitPrice*(UnitsInStock+ISNULL(UnitsOnOrder,0)) FROM Products
 |VAR(column)|某列非NULL值的方差|
 |VARP(column)|某列所有非NULL值的总体方差|
 
+18、获得一个表的所有字段名。
+> Select Name FROM SysColumns Where id=Object_Id('表名')
